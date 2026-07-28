@@ -1,3 +1,9 @@
+# Leet Code Palindrome
+# If the number is a palindrome, function returns true, else false
+# 121 -> true
+# 10 -> false
+# -121 -> false
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
 
