@@ -54,3 +54,32 @@ s consists of parentheses only '()[]{}'.
 
 class Solution:
     def isValid(self, s: str) -> bool:
+        charList = list(s)
+        stack = []
+        currentChar = ""
+
+        for item in s:
+            if item == "[" or item == "(" or item == "{":
+                stack.append(item)
+                continue
+
+            if not stack:
+                return False
+            currentChar = stack.pop()
+            print(currentChar)
+            if currentChar != "(" and item == ")":
+                return False
+            if currentChar != "[" and item == "]":
+                return False
+            if currentChar != "{" and item == "}":
+                return False
+        
+        if stack:
+            return False
+        return True
+
+def main():
+    solution = Solution()
+    print(solution.isValid("((("))
+
+main()
