@@ -57,5 +57,4 @@ class Solution:
 def main():
     solution = Solution()
     print(solution.reverse(1563847412))
-main()
-            
+main()    
